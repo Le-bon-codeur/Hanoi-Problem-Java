@@ -33,8 +33,7 @@ public class Hanoi {
     public void hanoi_process(int _num_disk, PileInteger _start, PileInteger _end, PileInteger _tmp) throws Exception {
         if(_num_disk != 0) {
             hanoi_process(_num_disk-1, _start, _tmp, _end);
-            Integer tmp = _start.unstack();
-            _end.stack(tmp);
+            _end.stack(_start.unstack());
             display();
             hanoi_process(_num_disk-1, _tmp, _end, _start);
         }
