@@ -34,7 +34,7 @@ public class List {
         }
     }
     public Object next() throws Exception {
-        if (m_position == 0) {
+        if (this.m_list.size() == 0) {
             throw new Exception("The list is empty, you cannot get the next elem", null);
         } else if (this.m_list.size() == 1) {
             throw new Exception("The list contains only one elem, you cannot get the next one", null);
